@@ -6,11 +6,12 @@ import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
 import 'yet-another-react-lightbox/styles.css';
 
+const BASE_URL = import.meta.env.BASE_URL;
 const demoImages = [
-  [{src: '/1.png', link: ''},{src: '/2.png', link: ''}],
-  [{src: '/3.jpeg', link: 'https://en.orionstar.com/factory.html'},{src: '/4.jpeg', link: 'https://en.orionstar.com/restaurant.html'}],
-  [{src: '/5.png', link: ''},{src: '/6.png', link: ''}],
-  [{src: '/7.png', link: 'https://en.orionstar.com/products.html'},{src: '/8.png', link: 'https://en.orionstar.com/robot-waiter-restaurant.html'},{src: '/9.png', link: 'https://en.orionstar.com/PressReleases-1.html'}]
+  [{src: `${BASE_URL}1.png`, link: ''},{src: `${BASE_URL}2.png`, link: ''}],
+  [{src: `${BASE_URL}3.jpeg`, link: 'https://en.orionstar.com/factory.html'},{src: `${BASE_URL}4.jpeg`, link: 'https://en.orionstar.com/restaurant.html'}],
+  [{src: `${BASE_URL}5.png`, link: ''},{src: `${BASE_URL}6.png`, link: ''}],
+  [{src: `${BASE_URL}7.png`, link: 'https://en.orionstar.com/products.html'},{src: `${BASE_URL}8.png`, link: 'https://en.orionstar.com/robot-waiter-restaurant.html'},{src: `${BASE_URL}9.png`, link: 'https://en.orionstar.com/PressReleases-1.html'}]
 ];
 
 const projects = [
