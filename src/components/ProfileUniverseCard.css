@@ -1,0 +1,43 @@
+.glow-card {
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 18px;
+    border: 2px solid #fff;
+    box-shadow:
+      0 0 16px 2px #fff,
+      0 2px 24px 0 #38bdf8cc;
+    filter: drop-shadow(0 0 8px #fff8);
+    transition: box-shadow 0.3s, filter 0.3s, transform 0.3s;
+    position: relative;
+  }
+  
+  .glow-card:hover {
+    box-shadow:
+      0 0 32px 6px #38bdf8,
+      0 2px 32px 0 #f472b6cc,
+      0 0 24px #fff;
+    filter: drop-shadow(0 0 16px #38bdf8cc) brightness(1.1);
+    transform: scale(1.04) rotate(-1deg);
+  }
+  
+  .glow-card-content {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 4px #38bdf8, 0 0 2px #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    transition: text-shadow 0.3s, color 0.3s, font-weight 0.3s;
+  }
+  
+  .glow-card:hover .glow-card-content {
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 8px #38bdf8, 0 0 2px #fff;
+    animation: none;
+  }
+  
+  @keyframes glowText {
+    0% { text-shadow: 0 0 8px #38bdf8, 0 0 2px #fff; }
+    100% { text-shadow: 0 0 16px #38bdf8, 0 0 4px #fff; }
+  }
