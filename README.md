@@ -79,6 +79,55 @@ my-showcase/
    yarn preview
    ```
 
+## 部署到 GitHub Pages
+
+本项目支持一键部署到 GitHub Pages，步骤如下：
+
+1. **安装 gh-pages 依赖**
+
+   ```bash
+   npm install gh-pages --save-dev
+   # 或
+   yarn add gh-pages --dev
+   ```
+
+2. **配置 `vite.config.ts`**
+
+   ```ts
+   // vite.config.ts
+   export default defineConfig({
+     // ...其他配置
+     base: '/my-showcase/', // 注意替换为你的仓库名
+   })
+   ```
+
+3. **在 `package.json` 中添加部署脚本和 homepage 字段**
+
+   ```json
+   {
+     "homepage": "https://<你的GitHub用户名>.github.io/my-showcase",
+     "scripts": {
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d dist"
+     }
+   }
+   ```
+
+4. **构建并部署**
+
+   ```bash
+   npm run deploy
+   # 或
+   yarn deploy
+   ```
+
+5. **在 GitHub 仓库设置 Pages**
+   - 进入仓库 Settings > Pages
+   - Source 选择 `gh-pages` 分支，目录为 `/ (root)`
+   - 保存后等待几分钟，访问 `https://<你的GitHub用户名>.github.io/my-showcase/`
+
+> 如需自定义域名，可在 Pages 设置中配置 Custom domain。
+
 ## 亮点特色
 
 - **3D可视化**：全流程3D动画与交互，沉浸式体验。
